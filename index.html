@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Abhinav Kourav's portfolio - Web Developer specializing in responsive design and modern web solutions.">
+  <title>Abhinav Kourav - Web Developer</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+  <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
+</head>
+
+<body>
+
+  <nav>
+
+    <div class="logo" href="#">Abhinav<span>Kourav</span></div>
+
+    <div class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
+
+    <button class="humburger">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+
+    <button class="contact-info">Contact Me</button>
+
+    <!-- <a href="cv.pdf" class="download-cv" download>
+      <i class="fas fa-download"></i>Download CV
+    </a> -->
+  </nav>
+
+
+  <!-- end-navbar......................... -->
+
+  <section class="hero">
+
+    <div class="hero-content">
+
+      <h1>Hi, It's <span>Abhinav</span></h1>
+
+      <h2>I'm A Web Developer</h2>
+
+      <p>With a blend of creativity and technical skill, I strive to create websites that are as visually appealing as they are functional. My approach is user-centric, ensuring that every project not only meets but exceeds client expectations.
+      </p>
+
+      <div class="social-links">
+
+        <a href="#" class="icon" aria-label="GitHub Profile">
+          <i class="fa-brands fa-github"></i>
+        </a>
+
+        <a href="#" class="icon" aria-label="Linkedin Profile">
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
+
+        <a href="#" class="icon" aria-label="instagram Page">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+
+        <a href="#" class="icon" aria-label="Twitter">
+          <i class="fa-brands fa-twitter"></i>
+        </a>
+
+      </div>
+
+      <div class="cta-buttons">
+        <button class="hire-btn">Hire Me</button>
+        <a href="#contact" class="contact-link">contact</a>
+      </div>
+    </div>
+
+
+    <div class="profile-image">
+      <img src="mainphoto.jpg" alt="profile-image">
+    </div>
+
+  </section>
+
+  <section class="contact-form" id="contact">
+    <div class="form-container">
+      <h2>Contact Me</h2>
+      <p>Feel free to reach out to me by filling out the form below. I'd love to hear from you!</p>
+      
+      <form action="#" method="POST" class="form">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Your Name" required />
+        </div>
+  
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="Your Email" required />
+        </div>
+  
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+        </div>
+  
+        <button type="submit" class="submit-btn">Submit</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+<footer>
+  <div class="footer-container">
+
+    <div class="footer-social">
+      <h3>Follow Me</h3>
+      <div class="social-links">
+        <a href="#" class="icon">
+          <i class="fa-brands fa-github"></i>
+        </a>
+        <a href="#" class="icon">
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
+        <a href="#" class="icon">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="#" class="icon">
+          <i class="fa-brands fa-twitter"></i>
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-legal">
+      <p>&copy; 2024 Abhinav Kourav. All Rights Reserved.</p>
+      <div class="legal-links">
+        <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+  
+
+  <script src="script.js">
+    // Initialize EmailJS with your public key
+    emailjs.init("1nHhaMAcfeGDaQBkV"); // Replace with your actual public key
+
+    // Form submission event
+    document.querySelector('.contact-form').addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent the form from refreshing the page
+
+      // Send email using EmailJS
+      emailjs.sendForm('service_bm43you', 'template_5hylzhp', this)
+        .then(function(response) {
+          alert('Your message was sent successfully!');
+          // Optionally reset the form after submission
+          document.querySelector('.contact-form').reset();
+        }, function(error) {
+          alert('There was an error. Please try again.');
+        });
+    });
+  </script>
+
+</body>
+
+</html>
