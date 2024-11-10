@@ -49,7 +49,6 @@ nav {
 }
 
 .contact-info {
-
   background-color: #ff4500;
   color: white;
   padding: 0.7rem 1.5rem;
@@ -57,6 +56,9 @@ nav {
   cursor: pointer;
   transition: transform 0.3s;
   border-radius: 25px;
+  text-decoration: none; /* To remove underline from the link */
+  display: inline-block;
+  text-align: center;
 }
 
 .contact-info:hover {
