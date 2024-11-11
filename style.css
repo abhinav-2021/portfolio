@@ -183,6 +183,7 @@ nav {
 
 .contact-link {
   padding: 0.8rem 2rem;
+  padding-bottom: initial;
   border: none;
   border-radius: 25px;
   color: #ff4500;
@@ -190,7 +191,6 @@ nav {
   border: 1px solid #ff4500;
   text-decoration: none;
   transition: transform 0.3s;
-
 }
 
 .hire-btn:hover,
