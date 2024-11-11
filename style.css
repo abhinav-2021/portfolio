@@ -1,4 +1,4 @@
-* {
+f {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -182,8 +182,7 @@ nav {
 }
 
 .contact-link {
-  padding: 0.8rem 2rem;
-  padding-bottom: initial;
+  padding: 0.6rem 2rem;
   border: none;
   border-radius: 25px;
   color: #ff4500;
