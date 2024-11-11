@@ -32,18 +32,18 @@ Clone the repository:
 
 bash
 Copy code
-git clone https://github.com/your-username/your-repository-name.git
+git clone https://github.com/abhinav-2021/portfolio.git
 Navigate to the project directory:
 
 bash
 Copy code
-cd your-repository-name
+cd portfolio
 Open the index.html file in your browser:
 
 bash
 Copy code
 open index.html
-Alternatively, you can open it using a local server if you have one set up, or use an IDE like Visual Studio Code and open it using the "Go Live" feature.
+Alternatively, you can open it using a local server if you have one set up, or use an IDE like Visual Studio Code and open it using the "Go Live" feature in vs code.
 
 Contact Form
 The contact form on this portfolio uses EmailJS to send messages directly to my email. To set this up for your own use:
