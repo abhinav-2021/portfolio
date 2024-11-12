@@ -29,7 +29,7 @@ ham.addEventListener('click', togglemenu);
 
   
 
-// JavaScript for typing effect
+// JavaScript for typing effect(new feature of website)
 const words = ["Web Developer", "Programmer", "IITian", "Student"];
 const colors = ["#3A86FF", "#8338EC", "#FF006E", "#FB5607"];
 let currentColorIndex = 0;
@@ -71,3 +71,4 @@ function eraseWord() {
 document.addEventListener("DOMContentLoaded", () => {
   setTimeout(typeWord, newWordDelay);
 });
+
