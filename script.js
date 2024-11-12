@@ -35,9 +35,9 @@ const colors = ["#3A86FF", "#8338EC", "#FF006E", "#FB5607"];
 let currentColorIndex = 0;
 let currentIndex = 0;
 let charIndex = 0;
-const typingDelay = 150; // Speed of typing each character
-const erasingDelay = 100; // Speed of erasing each character
-const newWordDelay = 1000; // Delay before moving to the next word
+const typingDelay = 60; // Speed of typing each character
+const erasingDelay = 30; // Speed of erasing each character
+const newWordDelay = 800; // Delay before moving to the next word
 
 // Reference to the HTML element where the dynamic text should appear
 const dynamicTextElement = document.querySelector(".dynamic-text"); // Ensure your HTML has a class "dynamic-text" for this
