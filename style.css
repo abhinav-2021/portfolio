@@ -11,6 +11,9 @@ body {
   overflow-x: hidden;
 }
 
+
+
+
 nav {
   display: flex;
   justify-content: space-between;
@@ -115,6 +118,7 @@ nav {
   min-height: 80vh;
 }
 
+
 .fade-in {
   opacity: 0;
   animation: fadeIn 2s forwards;
@@ -145,6 +149,23 @@ nav {
   color: #ff4500;
   margin-bottom: 1.5rem;
 }
+
+.typing-cursor {
+  font-weight: bold;
+  font-size: 1.2em;
+  color: whitesmoke; /* Adjust color to match your theme */
+  animation: blink 0.7s steps(2, start) infinite;
+}
+
+@keyframes blink {
+  0%, 50% {
+    opacity: 1;
+  }
+  50.1%, 100% {
+    opacity: 0;
+  }
+}
+
 
 .hero-content p {
   color: #888;
@@ -543,8 +564,8 @@ nav {
   }
 
   .profile-image{
-    width: 300px;
-    height: 300px;
+    width: 270px;
+    height: 270px;
     margin-bottom: 2rem;
   }
 
