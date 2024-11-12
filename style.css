@@ -154,14 +154,17 @@ nav {
   font-weight: bold;
   font-size: 1.2em;
   color: whitesmoke; /* Adjust color to match your theme */
-  animation: blink 0.7s steps(2, start) infinite;
+  animation: blink 0.6s steps(2, start) infinite;
 }
 
 @keyframes blink {
   0%, 50% {
-    opacity: 1;
+    opacity: 0.8;
   }
-  50.1%, 100% {
+  50.1%, 70% {
+    opacity: 0.4;
+  }
+  70.1%, 100%{ 
     opacity: 0;
   }
 }
