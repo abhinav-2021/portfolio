@@ -1,4 +1,4 @@
-f {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -114,6 +114,18 @@ nav {
   padding: 2rem 10%;
   min-height: 80vh;
 }
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 2s forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
 
 .hero-content {
   max-width: 600px;
@@ -284,6 +296,26 @@ nav {
   background-color: #ff5722;
 }
 
+.form-message {
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: 5px;
+  display: none;
+}
+
+.form-message.success {
+  background-color: #d4edda;
+  color: #155724;
+  display: block;
+}
+
+.form-message.error {
+  background-color: #f8d7da;
+  color: #721c24;
+  display: block;
+}
+
+
 /* Footer Styles */
 .footer {
   background-color: #0a0a0a;
@@ -299,12 +331,13 @@ nav {
   gap: 2rem;
 }
 
-.footer-about,
+/* .footer-about,
 .footer-links,
 .footer-social,
 .footer-legal {
-  /* flex: 1 1 250px; */
-}
+    }
+      */
+
 
 .footer-about h3,
 .footer-links h3,
@@ -405,6 +438,7 @@ nav {
   font-size: 1.1rem;
   margin-top: 0.5rem;
 }
+
 
 /* Animations */
 @keyframes pulse {
