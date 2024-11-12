@@ -5,10 +5,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Abhinav Kourav's portfolio - Web Developer specializing in responsive design and modern web solutions.">
+  <meta name="keywords" content="Abhinav's portfolio, web development, Contact Abhinav Kourav">
   <title>Abhinav Kourav - Web Developer</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
-  <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 
 </head>
 
@@ -34,13 +35,16 @@
 
     <a href="https://wa.me/917879832442" class="contact-info" target="_blank">Contact Me</a>
 
+    <!-- <button id="dark-mode-toggle">Toggle Dark Mode</button> -->
+
+
     
   </nav>
 
 
   <!-- end-navbar......................... -->
 
-  <section class="hero">
+  <section class="hero , fade-in">
 
     <div class="hero-content">
 
@@ -93,15 +97,15 @@
       <h2>Contact Me</h2>
       <p>Feel free to reach out to me by filling out the form below. I'd love to hear from you!</p>
       
-      <form action="#" method="POST" class="form">
+      <form id="contact-form" action="#" method="POST" class="form">
         <div class="form-group">
           <label for="name">Name</label>
-          <input type="text" id="name" name="name" placeholder="Your Name" required />
+          <input type="text" id="name" name="from_name" placeholder="Your Name" required />
         </div>
   
         <div class="form-group">
           <label for="email">Email</label>
-          <input type="email" id="email" name="email" placeholder="Your Email" required />
+          <input type="email" id="email" name="from_email" placeholder="Your Email" required />
         </div>
   
         <div class="form-group">
@@ -110,9 +114,56 @@
         </div>
   
         <button type="submit" class="submit-btn">Submit</button>
+
+        <!-- Message div for success or error notifications -->
+        <div id="form-message" class="form-message"></div>
+
       </form>
     </div>
   </section>
+
+  <script>
+    // Initialize EmailJS with your public key
+    emailjs.init("1nHhaMAcfeGDaQBkV"); // Replace with your actual public key
+  
+    // Form submission event
+    document.getElementById("contact-form").addEventListener("submit", function(event) {
+  event.preventDefault(); // Prevent the form from refreshing the page
+
+  // Send email using EmailJS
+  emailjs.sendForm("service_bm43you", "template_zxuh5ws", this)
+    .then(function(response) {
+      console.log('SUCCESS!', response);
+      // Show success message
+      const messageDiv = document.getElementById("form-message");
+      messageDiv.textContent = "Your message was sent successfully!";
+      messageDiv.className = "form-message success";
+      messageDiv.style.display = "block";
+
+      // Hide the message after 3 seconds
+      // setTimeout(function() {
+      //   message.style.display = 'none';
+      // }, 3000);
+
+
+      // Reset the form after submission
+      document.getElementById("contact-form").reset();
+    }, function(error) {
+      console.log('FAILED...', error);
+      // Show error message
+      const messageDiv = document.getElementById("form-message");
+      messageDiv.textContent = "There was an error sending your message. Please try again.";
+      messageDiv.className = "form-message error";
+      messageDiv.style.display = "block";
+    });
+
+    // Hide the message after 3 seconds
+    // setTimeout(function() {
+    //     message.style.display = 'none';
+    //   }, 3000);
+    });
+
+  </script>
 
   <!-- Footer -->
 <footer>
@@ -150,28 +201,6 @@
   </div>
 
 </footer>
-
-  
-
-  <script src="script.js">
-    // Initialize EmailJS with your public key
-    emailjs.init("1nHhaMAcfeGDaQBkV"); // Replace with your actual public key
-
-    // Form submission event
-    document.querySelector('.contact-form').addEventListener('submit', function(event) {
-      event.preventDefault(); // Prevent the form from refreshing the page
-
-      // Send email using EmailJS
-      emailjs.sendForm('service_bm43you', 'template_5hylzhp', this)
-        .then(function(response) {
-          alert('Your message was sent successfully!');
-          // Optionally reset the form after submission
-          document.querySelector('.contact-form').reset();
-        }, function(error) {
-          alert('There was an error. Please try again.');
-        });
-    });
-  </script>
 
 </body>
 
