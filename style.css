@@ -84,7 +84,7 @@ nav {
 }
 
 .contact-info {
-  color : linear-gradient(135deg, #ff4500, #ff6b3f);
+  background : linear-gradient(135deg, #ff4500, #ff6b3f);
   color: white;
   padding: 0.7rem 1.5rem;
   border: none;
