@@ -19,6 +19,9 @@
 </head>
 
 <body>
+  <div class="loading-container">
+    <div class="loading-bar"></div>
+  </div>
 
   <nav>
       
@@ -99,44 +102,94 @@
   </section>
 
   <section class="contact-form" id="contact">
-    <div class="form-container">
-      <h2>Contact Me</h2>
-      <p>Feel free to reach out to me by filling out the form below. I'd love to hear from you!</p>
-      
-      <form id="contact-form" action="#" method="POST" class="form">
-        <div class="form-group">
-          <label for="name">Name</label>
-          <input type="text" id="name" name="from_name" placeholder="Your Name" required />
-        </div>
-  
-        <div class="form-group">
-          <label for="email">Email</label>
-          <input type="email" id="email" name="from_email" placeholder="Your Email" required />
-        </div>
-  
-        <div class="form-group">
-          <label for="message">Message</label>
-          <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
-        </div>
-  
-        <button type="submit" class="submit-btn">Submit</button>
-        <!-- Add this loading overlay within the body, below your form or as a sibling to the form -->
-        <div id="loading-overlay" class="loading-overlay">
-          <div class="lds-ripple"><div></div><div></div></div>
-        </div>
-
-
-        <!-- Message div for success or error notifications -->
-        <div id="form-message" class="form-message"></div>
-
+    <section class="contact-form" id="contact">
+      <div class="form-container">
+        <h2>Contact Me</h2>
+        <p>Feel free to reach out by filling out the form below.I'd love to hear from you!</p>
+            
+        <form id="contact-form" action="#" method="POST" class="form">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="from_name" placeholder="Your Name" required />
+          </div>
+    
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="from_email" placeholder="Your Email" required />
+          </div>
+    
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+          </div>
+    
+          <button type="submit" class="submit-btn">Submit</button>
+          <div id="loading-overlay" class="loading-overlay">
+            <div class="lds-ripple"><div></div><div></div></div>
+          </div>
+    
+          <div id="form-message" class="form-message"></div>
+        </form>
+      </div>
+    </section>
       </form>
     </div>
-  </section>
+ 
 
-  <script>
+  <!-- skill section -->
+  <!-- <section class="skills-section">
+    <div class="skills-container">
+      <div class="skill-card" data-skill="HTML">
+        <img src="icons/html.svg" alt="HTML">
+      </div>
+      <div class="skill-card" data-skill="CSS">
+        <img src="icons/css.svg" alt="CSS">
+      </div>
+      <div class="skill-card" data-skill="JavaScript">
+        <img src="icons/javascript.svg" alt="JavaScript">
+      </div>
+      <div class="skill-card" data-skill="Python">
+        <img src="icons/python.svg" alt="Python">
+      </div>
+      <div class="skill-card" data-skill="GitHub">
+        <img src="icons/github.svg" alt="GitHub">
+      </div>
+      <div class="skill-card" data-skill="VS Code">
+        <img src="icons/vscode.svg" alt="VS Code">
+      </div>
+      <div class="skill-card" data-skill="Bootstrap">
+        <img src="icons/bootstrap.svg" alt="Bootstrap">
+      </div>
+      <div class="skill-card" data-skill="Tailwind CSS">
+        <img src="icons/tailwind.svg" alt="Tailwind CSS">
+      </div>
+      <div class="skill-card" data-skill="React">
+        <img src="icons/react.svg" alt="React">
+      </div>
+      <div class="skill-card" data-skill="Linux">
+        <img src="icons/linux.svg" alt="Linux">
+      </div>
+      <div class="skill-card" data-skill="AWS">
+        <img src="icons/aws.svg" alt="AWS">
+      </div>
+      <div class="skill-card" data-skill="MySQL">
+        <img src="icons/mysql.svg" alt="MySQL">
+      </div>
+      <div class="skill-card" data-skill="Docker">
+        <img src="icons/docker.svg" alt="Docker">
+      </div>
+      <div class="skill-card" data-skill="Node.js">
+        <img src="icons/nodejs.svg" alt="Node.js">
+      </div>
+      <div class="skill-card" data-skill="Express.js">
+        <img src="icons/expressjs.svg" alt="Express.js">
+      </div>
+    </div>-->
+  </section> 
+
+</section>
 
 
-  </script>
 
   <!-- Footer -->
 <footer>
@@ -192,6 +245,7 @@
   })();
   </script>
   <!--End of Tawk.to Script-->
+
 </body>
 
 </html>
