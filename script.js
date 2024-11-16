@@ -27,9 +27,19 @@ document.addEventListener('click', (e) => {
 //event listnaer
 ham.addEventListener('click', togglemenu);
 
+// loading bar
+window.onload = function() {
+  // Hide loading bar once the page is fully loaded
+  document.querySelector('.loading-container').style.visibility = 'hidden';
+};
+
+// Optionally, show loading bar on page load
+document.querySelector('.loading-container').style.visibility = 'visible';
+
+
   
 
-// JavaScript for typing effect(new feature of website)
+// JavaScript for typing effect
 const words = ["Web Developer", "Programmer", "IITian", "Student"];
 const colors = ["#3A86FF", "#8338EC", "#FF006E", "#FB5607"];
 let currentColorIndex = 0;
@@ -71,4 +81,6 @@ function eraseWord() {
 document.addEventListener("DOMContentLoaded", () => {
   setTimeout(typeWord, newWordDelay);
 });
+
+
 
