@@ -1,3 +1,4 @@
+
 * {
   margin: 0;
   padding: 0;
@@ -9,6 +10,36 @@ body {
   background-color: #0a0a0a;
   color: white;
   overflow-x: hidden;
+}
+
+/* Container for the loading bar */
+.loading-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: rgba(0, 0, 0, 0.1);
+  z-index: 9999; /* Ensures it stays on top */
+  visibility: hidden; /* Initially hidden, will be shown when loading */
+}
+
+/* The actual loading bar */
+.loading-bar {
+  width: 0;
+  height: 100%;
+  background-color: #ff5722; /* Customizable color */
+  animation: loadingAnimation 3s linear infinite;
+}
+
+/* Animation for the loading bar */
+@keyframes loadingAnimation {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
 }
 
 
@@ -53,20 +84,22 @@ nav {
 }
 
 .contact-info {
-  background-color: #ff4500;
+  color : linear-gradient(135deg, #ff4500, #ff6b3f);
   color: white;
   padding: 0.7rem 1.5rem;
   border: none;
   cursor: pointer;
-  transition: transform 0.3s;
+  /* transition: transform 0.3s; */
   border-radius: 25px;
   text-decoration: none; /* To remove underline from the link */
   display: inline-block;
   text-align: center;
+  transition: transform 0.3s, background 0.3s;
 }
 
 .contact-info:hover {
   transform: scale(1.05);
+  background: linear-gradient(135deg, #ff6b3f, #ff4500);
 }
 
 
@@ -250,124 +283,145 @@ nav {
 
 /* Styling the contact form section */
 .contact-form {
-  padding: 3rem 10%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 3rem 1rem;
   background-color: #1c1c1c;
-  margin-top: 3rem;
-  border-radius: 10px;
 }
 
-.contact-form h2 {
+
+
+
+
+.form-container {
+  background: rgba(255, 255, 255, 0.1); /*Semi-transparent white */
+  backdrop-filter: blur(10px); /* Glassmorphic blur */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Border for glass effect */
+  border-radius: 15px;
+  padding: 2rem;
+  max-width: 500px;
+  width: 100%;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  text-align: center;
+}
+
+.form-container h2 {
   font-size: 2.5rem;
   color: #ff4500;
   margin-bottom: 1rem;
 }
 
-.contact-form p {
-  color: #888;
+.form-container p {
   font-size: 1.1rem;
+  color: #888;
   margin-bottom: 2rem;
 }
 
 .form {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1rem;
 }
 
 .form-group {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
 }
 
 .form-group label {
-  font-size: 1rem;
+  font-size: 0.9rem;
   color: white;
   margin-bottom: 0.5rem;
 }
 
 .form-group input,
 .form-group textarea {
+  width: 100%;
   padding: 0.8rem;
   font-size: 1rem;
   border: none;
-  border-radius: 5px;
+  border-radius: 10px;
   outline: none;
-  background-color: #333;
+  background: rgba(255, 255, 255, 0.2); /* Slightly transparent white */
   color: white;
-  margin-bottom: 1rem;
+  backdrop-filter: blur(5px); /* Input blur */
+  transition: background 0.3s;
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
-  background-color: #444;
+  background: rgba(255, 255, 255, 0.3);
 }
 
 .submit-btn {
-  padding: 1rem 2rem;
-  background-color: #ff4500;
+  padding: 0.8rem 2rem;
+  background: linear-gradient(135deg, #ff4500, #ff6b3f);
   border: none;
   border-radius: 25px;
   color: white;
-  cursor: pointer;
-  transition: transform 0.3s;
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.3s, background 0.3s;
 }
 
 .submit-btn:hover {
   transform: scale(1.05);
-  background-color: #ff5722;
-}
-
-.form-message {
-  margin-top: 1rem;
-  padding: 1rem;
-  border-radius: 5px;
-  display: none;
-}
-
-.form-message.success {
-  background-color: #d4edda;
-  color: #155724;
-  display: block;
-}
-
-.form-message.error {
-  background-color: #f8d7da;
-  color: #721c24;
-  display: block;
+  background: linear-gradient(135deg, #ff6b3f, #ff4500);
 }
 
 /* Loading Overlay Styles */
-.loading-overlay{
+.loading-overlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgb(255 255 255 / 3%); /* Light overlay with opacity */
+  background: rgba(0, 0, 0, 0.5); /* Slightly dark transparent overlay */
   display: none;
   align-items: center;
   justify-content: center;
-  backdrop-filter: blur(8px); /* Blurs the background */
-  z-index: 1000; /* Ensures it overlays the whole screen */
+  backdrop-filter: blur(8px); /* Adds blur to the overlay */
+  z-index: 1000;
 }
 
-/* Spinner Animation Styles
-.spinner {
-  width: 50px;
-  height: 50px;
-  border: 6px solid #f3f3f3; /* Light gray background for spinner */
-  /* border-top: 6px solid #3498db; Blue spinner color */
-  /* border-radius: 50%;
-  animation: spin 1s linear infinite; */ */
-/* } */
+/* Form Message Styles */
+.form-message {
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  display: none;
+}
 
-/* Keyframes for Spinner Animation */
-/* @keyframes spin { */
-  /* 0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-} */
+.form-message.success {
+  background: rgba(0, 255, 0, 0.1);
+  color: #28a745;
+  display: block;
+}
+
+.form-message.error {
+  background: rgba(255, 0, 0, 0.1);
+  color: #dc3545;
+  display: block;
+}
+
+/* Placeholder Styles */
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: rgba(255, 255, 255, 0.7); /* Light white color for placeholders */
+  font-style: italic; /* Optional: Adds a subtle italic style */
+  font-size: 0.95rem; /* Optional: Adjust font size */
+}
+
+/* Placeholder on focus */
+.form-group input:focus::placeholder,
+.form-group textarea:focus::placeholder {
+  color: rgba(255, 255, 255, 0.5); /* Slightly lighter color on focus */
+  transition: color 0.3s; /* Smooth transition effect */
+}
 
 
 .lds-ripple,
@@ -420,6 +474,70 @@ nav {
     opacity: 0;
   }
 }
+
+/* skills sections */
+
+/* .skills-section {
+  position: relative;
+  padding: 2rem;
+}
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  position: relative;
+  max-width: 50%;
+  margin: auto;
+}
+
+.skill-card {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.skill-card img {
+  width: 40px;
+  height: 40px;
+}
+
+.skill-card:hover {
+  transform: scale(1.2);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+}
+
+.skill-card:hover ~ .skill-card {
+  transform: translateX(10px);
+}
+
+.skill-card::before {
+  content: attr(data-skill);
+  position: absolute;
+  bottom: -25px;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.8);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.skill-card:hover::before {
+  opacity: 1;
+  transform: translateY(0);
+}
+ */
 
 
 
@@ -545,7 +663,6 @@ nav {
   font-size: 1.1rem;
   margin-top: 0.5rem;
 }
-
 
 
 
@@ -697,4 +814,5 @@ nav {
   .footer-content {
       padding: 1rem;
     }
+    
 }
