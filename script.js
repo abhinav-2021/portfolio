@@ -27,14 +27,31 @@ document.addEventListener('click', (e) => {
 //event listnaer
 ham.addEventListener('click', togglemenu);
 
-// loading bar
-window.onload = function() {
-  // Hide loading bar once the page is fully loaded
-  document.querySelector('.loading-container').style.visibility = 'hidden';
+
+
+window.onload = function () {
+  // Select the loading container
+  const loadingContainer = document.querySelector('.loading-container');
+  const loadingBar = document.querySelector('.loading-bar'); // Assuming `.loading-bar` is inside `.loading-container`
+
+  // Make the loading bar visible on page refresh
+  loadingContainer.style.visibility = 'visible';
+
+  // Reset the loading bar width to start the animation
+  loadingBar.style.width = '0%';
+
+  // Start loading animation
+  setTimeout(() => {
+    loadingBar.style.transition = 'width 5s linear'; // Match this to the loading bar's CSS animation duration
+    loadingBar.style.width = '100%'; // Animate the bar to 100% width
+  }, 50); // Small delay to ensure visibility update happens
+
+  // Hide loading container after the animation completes
+  setTimeout(() => {
+    loadingContainer.style.visibility = 'hidden';
+  }, 5000); // Match this with the loading duration (5s)
 };
 
-// Optionally, show loading bar on page load
-document.querySelector('.loading-container').style.visibility = 'visible';
 
 
   
