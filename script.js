@@ -49,7 +49,7 @@ window.onload = function () {
   // Hide loading container after the animation completes
   setTimeout(() => {
     loadingContainer.style.visibility = 'hidden';
-  }, 5000); // Match this with the loading duration (5s)
+  }, 2000); // Match this with the loading duration (5s)
 };
 
 
