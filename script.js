@@ -42,9 +42,9 @@ window.onload = function () {
 
   // Start loading animation
   setTimeout(() => {
-    loadingBar.style.transition = 'width 5s linear'; // Match this to the loading bar's CSS animation duration
+    loadingBar.style.transition = 'width 2s linear'; // Match this to the loading bar's CSS animation duration
     loadingBar.style.width = '100%'; // Animate the bar to 100% width
-  }, 50); // Small delay to ensure visibility update happens
+  }, 05); // Small delay to ensure visibility update happens
 
   // Hide loading container after the animation completes
   setTimeout(() => {
