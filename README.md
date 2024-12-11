@@ -1,4 +1,3 @@
-Abhinav's Portfolio
 Welcome to the personal portfolio website repository of Abhinav Kourav. This website showcases my projects, skills, and contact details. Feel free to explore, and if you'd like to reach out, you can contact me directly through the contact form.
 
 Table of Contents
