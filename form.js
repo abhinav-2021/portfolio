@@ -4,23 +4,34 @@
     const loadingOverlay = document.getElementById("loading-overlay");
     const form = document.getElementById("contact-form");
 
-    document.addEventListener("DOMContentLoaded", () => {
-      const elements = document.querySelectorAll(".fade-in");
     
-      const revealOnScroll = () => {
-        elements.forEach((el) => {
-          const rect = el.getBoundingClientRect();
-          if (rect.top < window.innerHeight - 100) {
-            el.classList.add("visible");
-          }
-        });
+   //form animation   
+    document.addEventListener("DOMContentLoaded", () => {
+      const formContainer = document.querySelector(".contact-form");
+      const form = document.querySelector(".fade-in-form");
+    
+      const checkVisibility = () => {
+        const containerRect = formContainer.getBoundingClientRect();
+        const viewportHeight = window.innerHeight || document.documentElement.clientHeight;
+    
+        // Check visibility conditions based on form-container
+        const isContainerVisible =
+          containerRect.top < viewportHeight * 0.5 && // 80% of viewport height from top
+          containerRect.bottom > viewportHeight * 0.1; // 20% of viewport height from bottom
+    
+        // Add or remove the "visible" class
+        if (isContainerVisible) {
+          form.classList.add("visible"); // Fade in when 20%-80% is visible
+        } else {
+          form.classList.remove("visible"); // Fade out when outside this range
+        }
       };
     
-      // Run on scroll
-      window.addEventListener("scroll", revealOnScroll);
+      // Listen to scroll events
+      window.addEventListener("scroll", checkVisibility);
     
-      // Run once on page load in case form is already in view
-      revealOnScroll();
+      // Trigger once on page load
+      checkVisibility();
     });
     
 
