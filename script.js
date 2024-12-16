@@ -42,14 +42,14 @@ window.onload = function () {
 
   // Start loading animation
   setTimeout(() => {
-    loadingBar.style.transition = 'width 2s linear'; // Match this to the loading bar's CSS animation duration
+    loadingBar.style.transition = 'width 1.5s linear'; // Match this to the loading bar's CSS animation duration
     loadingBar.style.width = '100%'; // Animate the bar to 100% width
-  }, 05); // Small delay to ensure visibility update happens
+  }, 0o5); // Small delay to ensure visibility update happens
 
   // Hide loading container after the animation completes
   setTimeout(() => {
     loadingContainer.style.visibility = 'hidden';
-  }, 2000); // Match this with the loading duration (5s)
+  }, 1500); // Match this with the loading duration (1.5s)
 };
 
 
@@ -98,6 +98,3 @@ function eraseWord() {
 document.addEventListener("DOMContentLoaded", () => {
   setTimeout(typeWord, newWordDelay);
 });
-
-
-
