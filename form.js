@@ -29,6 +29,13 @@
     
       // Listen to scroll events
       window.addEventListener("scroll", checkVisibility);
+
+      let timeout;
+      window.addEventListener("scroll", () => {
+        clearTimeout(timeout);
+        timeout = setTimeout(checkVisibility, 100);
+      });
+
     
       // Trigger once on page load
       checkVisibility();
