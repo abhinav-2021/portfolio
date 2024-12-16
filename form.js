@@ -9,6 +9,7 @@
     document.addEventListener("DOMContentLoaded", () => {
       const formContainer = document.querySelector(".contact-form");
       const form = document.querySelector(".fade-in-form");
+      formContainer.className = "visible";
     
       const checkVisibility = () => {
         const containerRect = formContainer.getBoundingClientRect();
@@ -30,13 +31,7 @@
       // Listen to scroll events
       window.addEventListener("scroll", checkVisibility);
 
-      let timeout;
-      window.addEventListener("scroll", () => {
-        clearTimeout(timeout);
-        timeout = setTimeout(checkVisibility, 100);
-      });
-
-    
+          
       // Trigger once on page load
       checkVisibility();
     });
