@@ -9,8 +9,7 @@
     document.addEventListener("DOMContentLoaded", () => {
       const formContainer = document.querySelector(".contact-form");
       const form = document.querySelector(".fade-in-form");
-      formContainer.className = "visible";
-    
+          
       const checkVisibility = () => {
         const containerRect = formContainer.getBoundingClientRect();
         const viewportHeight = window.innerHeight || document.documentElement.clientHeight;
@@ -33,7 +32,7 @@
 
           
       // Trigger once on page load
-      checkVisibility();
+      // checkVisibility();
     });
     
 
