@@ -4,6 +4,26 @@
     const loadingOverlay = document.getElementById("loading-overlay");
     const form = document.getElementById("contact-form");
 
+    document.addEventListener("DOMContentLoaded", () => {
+      const elements = document.querySelectorAll(".fade-in");
+    
+      const revealOnScroll = () => {
+        elements.forEach((el) => {
+          const rect = el.getBoundingClientRect();
+          if (rect.top < window.innerHeight - 100) {
+            el.classList.add("visible");
+          }
+        });
+      };
+    
+      // Run on scroll
+      window.addEventListener("scroll", revealOnScroll);
+    
+      // Run once on page load in case form is already in view
+      revealOnScroll();
+    });
+    
+
     // Form submission event
     document.getElementById("contact-form").addEventListener("submit", function(event) {
       event.preventDefault(); // Prevent the form from refreshing the page
