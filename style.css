@@ -32,7 +32,7 @@ body {
   width: 0;
   height: 100%;
   background-color: #ff5722; 
-  animation: loadingAnimation 2s linear infinite;
+  animation: loadingAnimation 1.4s linear; 
 }
 
 /* Animation for the loading bar */
@@ -494,14 +494,14 @@ nav {
 }
 
 /* Initial hidden state */
-.fade-in {
+.fade-in-form {
   opacity: 0;
-  transform: translateY(100px); /* Moves it slightly down */
-  transition: opacity 1s ease, transform 1s ease;
+  transform: translateY(180px); /* Moves it slightly down */
+  transition: opacity 1s ease, transform 0.7s ease;
 }
 
 /* Visible state (triggered by JavaScript) */
-.fade-in.visible {
+.fade-in-form.visible {
   opacity: 1;
   transform: translateY(0); /* Moves it back to its original position */
 }
@@ -824,6 +824,18 @@ nav {
 
   .submit-btn {
     width: 100%;
+  }
+
+  .fade-in-form {
+    opacity: 0;
+    transform: translate(180px, 180px); /* Moves it slightly down */
+    transition: opacity 1s ease, transform 0.7s ease;
+  }
+  
+  /* Visible state (triggered by JavaScript) */
+  .fade-in-form.visible {
+    opacity: 1;
+    transform: translateY(0); /* Moves it back to its original position */
   }
 
   .footer-container {
