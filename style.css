@@ -9,7 +9,8 @@
 body {
   background-color: #0a0a0a;
   color: white;
-  overflow-x: hidden;
+  overflow-x: hidden;   
+  scroll-behavior: smooth;
 }
 
 
@@ -288,8 +289,23 @@ nav {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  padding: 3rem 1rem;
+  /* padding: 3rem 1rem; */
+  margin-top: 3rem;
+  margin-bottom: 3rem;
   background-color: #1c1c1c;
+  position: relative;
+  overflow: hidden;
+}
+.contact-form::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('formbg.svg') no-repeat center/cover;
+  opacity: 0.8; /* Adjust transparency */
+  z-index: 0; /* Ensure it is behind form content */
 }
 
 
@@ -298,7 +314,7 @@ nav {
 
 .form-container {
   background: rgba(255, 255, 255, 0.1); /*Semi-transparent white */
-  backdrop-filter: blur(10px); /* Glassmorphic blur */
+  backdrop-filter: blur(3px); /* Glassmorphic blur */
   border: 1px solid rgba(255, 255, 255, 0.2); /* Border for glass effect */
   border-radius: 15px;
   padding: 2rem;
@@ -348,7 +364,7 @@ nav {
   outline: none;
   background: rgba(255, 255, 255, 0.2); /* Slightly transparent white */
   color: white;
-  backdrop-filter: blur(5px); /* Input blur */
+  backdrop-filter: blur(10px); /* Input blur */
   transition: background 0.3s;
 }
 
@@ -475,6 +491,19 @@ nav {
     height: 80px;
     opacity: 0;
   }
+}
+
+/* Initial hidden state */
+.fade-in {
+  opacity: 0;
+  transform: translateY(100px); /* Moves it slightly down */
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+/* Visible state (triggered by JavaScript) */
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0); /* Moves it back to its original position */
 }
 
 /* skills sections */
@@ -780,7 +809,8 @@ nav {
   }
 
   .contact-form {
-    padding: 2rem 5%;
+    padding: 0.5rem 2.5%;
+    
   }
 
   .form-container {
@@ -806,7 +836,7 @@ nav {
   .footer-social,
   .footer-legal {
     text-align: center; 
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
   } 
 
   .footer-legal {
