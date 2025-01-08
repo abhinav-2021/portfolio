@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LJW7CVNWDH"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  
+    gtag('config', 'G-LJW7CVNWDH');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Abhinav Kourav's portfolio - Web Developer specializing in responsive design and modern web solutions.">
+  <meta name="keywords" content="Abhinav's portfolio, web development, Contact Abhinav Kourav">
+  <link rel="icon" href="icon-128x128.png" type="image/x-icon"> 
+  <!-- Apple touch icon for iOS devices -->
+  <!-- <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png"> -->
+
+
+  <title>Abhinav Kourav - Web Developer</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
+</head>
+
+<body>
+ 
+    <div class="loading-container">
+    <div class="loading-bar"></div>
+  </div>
+
+  <nav>
+      
+    <div class="logo" href="#home">Abhinav<span>Kourav</span></div>
+
+    <div class="nav-links">
+      <a href="#home"><i class="fa-solid fa-house"></i></a>
+      <a href="#about"><i class="fa-solid fa-user"></i></a>
+      <a href="#contact"><i class="fa-solid fa-briefcase"></i></a>
+      <a href="#projects"><i class="fa-solid fa-folder-open"></i></a>
+      <a href="https://wa.me/917879832442"><i class="fa-solid fa-message"></i></a>
+    </div>
+
+    <button class="humburger">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+
+    <a href="https://wa.me/917879832442" class="contact-info" target="_blank">Contact Me</a>
+
+    <!-- <button id="dark-mode-toggle">Toggle Dark Mode</button> -->
+
+
+    
+  </nav>
+
+
+  <!-- end-navbar......................... -->
+
+  <section class="hero , fade-in">
+
+    <div class="hero-content">
+
+      <h1>Hi, It's <span>Abhinav</span></h1>
+
+      <!-- <h2>I'm A Web Developer</h2> -->
+      <h2>I'm a <span class="dynamic-text"></span><span class="typing-cursor">|</span></h2>
+
+      <p>With a blend of creativity and technical skill, I strive to create websites that are as visually appealing as they are functional. My approach is user-centric, ensuring that every project not only meets but exceeds client expectations.
+      </p>
+
+      <div class="social-links">
+
+        <a href="https://github.com/abhinav-2021" class="icon" title="Abhinav Kourav GitHub Profile" aria-label="Abhinav Kourav GitHub Profile">
+          <i class="fa-brands fa-github"></i>
+        </a>
+
+        <a href="https://www.linkedin.com/in/abhinav-kourav-b67a04210/" class="icon" title="Abhinav Kourav linkedin Profile" aria-label="Abhinav Kourav linkedin Profile">
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
+
+        <a href="https://www.instagram.com/_abhinavkourav/" class="icon" title="Abhinav Kourav's Instagram Page" aria-label="Abhinav Kourav's Instagram Page">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+
+        <a href="https://x.com/abhinav_kourav" class="icon" title="Abhinav Kourav twitter Profile" aria-label="Abhinav Kourav twitter Profile">
+          <i class="fa-brands fa-twitter"></i>
+        </a>
+
+      </div>
+
+      <div class="cta-buttons">
+       <a href="https://wa.me/917879832442"> <button class="hire-btn">Hire Me</button></a>
+        <!-- <a href="" class="contact-link">contact</a> -->
+        <a href="Abhinav-CV.pdf" class="contact-link" download>
+      <i class="fas fa-download"></i> CV
+        </a>
+
+      </div>
+    </div>
+
+
+    <div class="profile-image" >
+      <img src="mainphoto.jpg" alt="abhinav kourav profile image" loading="lazy" aria-placeholder="Abhinav kourav progile image">
+    </div>
+
+  </section>
+
+  <section class="contact-form" id="contact">
+    <section class="contact-form visible" id="contact">
+      <div class="form-container fade-in-form visible">
+        <h2>Contact Me</h2>
+        <p>Feel free to reach out by filling out the form below.I'd love to hear from you!</p>
+            
+        <form id="contact-form" action="#" method="POST" class="form">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="from_name" placeholder="Your Name" required />
+          </div>
+    
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="from_email" placeholder="Your Email" required />
+          </div>
+    
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+          </div>
+    
+          <button type="submit" class="submit-btn">Submit</button>
+          <div id="loading-overlay" class="loading-overlay">
+            <div class="lds-ripple"><div></div><div></div></div>
+          </div>
+    
+          <div id="form-message" class="form-message"></div>
+        </form>
+      </div>
+    </section>
+      </form>
+    </div>
+</section>
+    
+
+
+  <!-- Footer -->
+<footer>
+  <div class="footer-container">
+
+    <div class="footer-social">
+      <h3>Follow Me</h3>
+      <div class="social-links">
+        <a href="https://github.com/abhinav-2021" class="icon" title="Abhinav Kourav GitHub Profile" aria-label="Abhinav Kourav GitHub Profile">
+          <i class="fa-brands fa-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/abhinav-kourav-b67a04210/" class="icon" title="Abhinav Kourav linkedin Profile" aria-label="Abhinav Kourav linkedin Profile">
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
+        <a href="https://www.instagram.com/_abhinavkourav/" class="icon"  title="Abhinav Kourav's Instagram Page" aria-label="Abhinav Kourav's Instagram Page">
+          <i class="fa-brands fa-instagram" ></i>
+        </a>
+        <a href="https://x.com/abhinav_kourav" class="icon" title="Abhinav Kourav twitter" aria-label="Abhinav Kourav twitter">
+          <i class="fa-brands fa-twitter"></i>
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-legal">
+      <p>&copy; 2024 Abhinav Kourav. All Rights Reserved.</p>
+      <div class="legal-links">
+        <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+      </div>
+    </div>
+
+    <div class="footer-section footer-note">
+      <p>Made with ❤️ by Abhinav Kourav</p>
+      <p class="construction-note">⚠️ Site Under Construction ⚠️</p>
+    </div>
+  </div>
+
+</footer>
+
+<script src="script.js "></script>
+<script src="form.js" defer></script>
+
+<!-- live chat -->
+  <!-- tidio -->
+  <script src="//code.tidio.co/fwl1gsq1jvylakkslbp5sk5th8bugxda.js" async></script>
+
+</body>
+
+</html>
