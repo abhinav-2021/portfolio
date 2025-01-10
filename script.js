@@ -49,7 +49,6 @@ window.onload = function () {
 };
 
 
-
   
 
 // JavaScript for typing effect
