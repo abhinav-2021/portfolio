@@ -116,6 +116,26 @@ nav {
 }
 
 
+a[title]:hover::after {
+  content: attr(title);
+  position: absolute;
+  background: #363636d5;
+  color: #ffffffad;
+  padding: 5px 10px;
+  border-radius: 5px;
+  top: 100%; /* Adjust position */
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  z-index: 10;
+  
+}
+
+a[title]:hover {
+  position: relative;
+}
+
+
 .contact-info {
   background : linear-gradient(135deg, #ff4500, #ff6b3f);
   color: rgba(255, 255, 255, 0.918);
@@ -716,16 +736,16 @@ nav {
   font-size: 1rem;
 }
 
-.footer-note .heart {
-  color: #ff4500;
-  animation: heartbeat 1.5s infinite;
-}
 
 .footer-note .construction-note {
   color: #ff4500;
   animation: pulse 1.5s infinite;
   font-size: 1.1rem;
   margin-top: 0.5rem;
+}
+
+.footer-note .construction-note:hover {
+  animation: none;
 }
 
 
@@ -736,10 +756,6 @@ nav {
   50% { opacity: 0.5; }
 }
 
-@keyframes heartbeat {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.2); }
-}
 
 
 @media (max-width: 1200px) {
