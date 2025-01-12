@@ -52,7 +52,7 @@ window.onload = function () {
   
 
 // JavaScript for typing effect
-const words = ["Web Developer", "Programmer", "IITian", "Student"];
+const words = ["Web Developer", "Programmer", "Future IITian", "Student"];
 const colors = ["#3A86FF", "#8338EC", "#FF006E", "#FB5607"];
 let currentColorIndex = 0;
 let currentIndex = 0;
