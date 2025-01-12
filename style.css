@@ -59,6 +59,7 @@ nav {
   align-items: center;
   padding: 1.5rem 10%;
   position: relative;
+  z-index: 1000;
 }
 
 .logo {
@@ -84,7 +85,9 @@ nav {
   color: whitesmoke;  
   text-decoration: none;
   transition: color 0.3s ease, transform 0.3s ease; 
-  padding: 5px;
+  padding-left: 7px;
+  padding-right: 6px;
+  padding-bottom: 4px;
   
   
   
@@ -105,13 +108,13 @@ nav {
   
   position: relative;
   /* bottom: 2; */
-  top: 4px;
+  top: 5px;
   left: 0px;
   height: 4px;
-  width: 36px; /* Adjust width to match your icon size */
+  width: 38px; /* Adjust width to match your icon size */
   background-color: #ff4500;
   transition: 0.3s ease;
-  border-radius: 100px;
+  border-radius: 120px;
   cursor: default;
 }
 
@@ -143,7 +146,7 @@ a[title]:hover {
   border: none;
   cursor: pointer;
   /* transition: transform 0.3s; */
-  border-radius: 25px;
+  border-radius: 12px;
   text-decoration: none; /* To remove underline from the link */
   display: inline-block;
   text-align: center;
@@ -162,7 +165,7 @@ a[title]:hover {
   padding: 0.7rem 1.5rem;
   border: none;
   cursor: pointer;
-  border-radius: 25px;
+  border-radius: 12px;
   text-decoration: none;
   display: flex;
   align-items: center;
@@ -273,7 +276,7 @@ a[title]:hover {
   width: 40px;
   height: 40px;
   border: 1px solid #ff4500;
-  border-radius: 50%;
+  border-radius: 38%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -298,7 +301,7 @@ a[title]:hover {
   background-color: #ff4500;
   padding: 0.8rem 2rem;
   border: none;
-  border-radius: 25px;
+  border-radius: 12px;
   color: white;
   cursor: pointer;
   transition: transform 0.3s;
@@ -308,7 +311,7 @@ a[title]:hover {
 .contact-link {
   padding: 0.6rem 2rem;
   border: none;
-  border-radius: 25px;
+  border-radius: 12px;
   color: #ff4500;
   cursor: pointer;
   border: 1px solid #ff4500;
@@ -430,7 +433,7 @@ a[title]:hover {
   padding: 0.8rem 2rem;
   background: linear-gradient(135deg, #ff4500, #ff6b3f);
   border: none;
-  border-radius: 25px;
+  border-radius: 12px;
   color: white;
   font-size: 1rem;
   font-weight: bold;
@@ -689,7 +692,7 @@ a[title]:hover {
   width: 40px;
   height: 40px;
   border: 1px solid #ff4500;
-  border-radius: 50%;
+  border-radius: 38%;
   display: flex;
   align-items: center;
   justify-content: center;
