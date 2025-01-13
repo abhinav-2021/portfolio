@@ -3,7 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
+  font-family: poppins, sans-serif;    ;
   scroll-behavior: smooth;
   }
 
@@ -562,69 +562,14 @@ a[title]:hover {
   transform: translateY(0); /* Moves it back to its original position */
 }
 
-/* skills sections */
-
-/* .skills-section {
-  position: relative;
-  padding: 2rem;
-}
-
-.skills-container {
+.cal h1 {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1.5rem;
-  position: relative;
-  max-width: 50%;
-  margin: auto;
+  justify-content: center;  
+  font-size: 2.5rem;
+  color: whitesmoke;
+  margin-bottom: 1rem;
+  /* font-family: 'Times New Roman', Times, serif; */
 }
-
-.skill-card {
-  position: relative;
-  width: 80px;
-  height: 80px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(255, 255, 255, 0.1);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  border-radius: 10px;
-  backdrop-filter: blur(10px);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer;
-}
-
-.skill-card img {
-  width: 40px;
-  height: 40px;
-}
-
-.skill-card:hover {
-  transform: scale(1.2);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
-}
-
-.skill-card:hover ~ .skill-card {
-  transform: translateX(10px);
-}
-
-.skill-card::before {
-  content: attr(data-skill);
-  position: absolute;
-  bottom: -25px;
-  font-size: 0.9rem;
-  color: rgba(255, 255, 255, 0.8);
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  opacity: 0;
-  transform: translateY(10px);
-  transition: opacity 0.3s ease, transform 0.3s ease;
-}
-
-.skill-card:hover::before {
-  opacity: 1;
-  transform: translateY(0);
-}
- */
 
 
 
@@ -773,6 +718,12 @@ a[title]:hover {
     max-width: 300px;
   }
 
+  .cal{   
+    padding: 0 15px 25px 15px ;  
+    
+  }
+
+
 }
 
 
@@ -898,6 +849,29 @@ a[title]:hover {
     opacity: 1;
     transform: translateY(0); /* Moves it back to its original position */
   }
+
+  .cal{   
+    padding: 15px 15px 25px 15px ;  
+    
+  }
+
+  .cal h1 {
+    display: flex;
+    justify-content: center;  
+    font-size: 1.5rem;
+    color: whitesmoke;
+    margin-bottom: 1rem;
+    /* font-family: 'Times New Roman', Times, serif; */
+  }
+
+  .cal p {
+    font-size: 0.4rem;
+    display: flex;
+    padding: 15px 10px 15px 0px ;
+    
+    
+  }  
+
 
   .footer-container {
     flex-direction: column;

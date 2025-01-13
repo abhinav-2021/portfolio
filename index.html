@@ -42,7 +42,7 @@
       <a href="#home"  title="Home"><i class="fa-solid fa-house" ></i>
         <div class="nav-indicator"></div></a>
       <a href="about.html" title="About"><i class="fa-solid fa-user"></i></a>
-      <a href="#contact" title="Contact"><i class="fa-solid fa-briefcase"></i></a>
+      <a href="#cal" title="Meet Me"><i class="fa-solid fa-calendar-days"></i></i></a>
       <a href="projects.html" title="Projects"><i class="fa-solid fa-folder-open"></i></a>
       <a href="https://wa.me/917879832442?text=Hello%2C%20I%20would%20like%20to%20inquire%20about%20your%20services." target="_blank" title="Personal Chat"><i class="fa-solid fa-message"></i></a>
       
@@ -149,13 +149,35 @@
       </div>
     </section>
       </form>
-    </div>
+    </div>    
+</section>
+
+<section class="cal" id="cal">
+  <h1>Schedule a <span style="color: #ff4500; display: inline-block; margin: 0 0.2em 0 0.2em;">Meeting</span> Now</h1>
+  <!-- Cal inline embed code begins -->
+<div style="width:100%;height:100%;overflow:scroll" id="my-cal-inline"></div>
+<script type="text/javascript">
+  (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+Cal("init", "15min", {origin:"https://cal.com"});
+
+  Cal.ns["15min"]("inline", {
+    elementOrSelector:"#my-cal-inline",
+    config: {"layout":"month_view","theme":"dark"},
+    calLink: "abhinavkourav/15min",
+  });
+
+  Cal.ns["15min"]("ui", {"theme":"dark","cssVarsPerTheme":{"light":{"cal-brand":"#292929"},"dark":{"cal-brand":"#ff4500"}},"hideEventTypeDetails":false,"layout":"month_view"});
+  </script>
+  <!-- Cal inline embed code ends -->
+
+   <p style="display: flex; align-items: center; justify-content: center; margin-bottom: 1rem; font-size: 1rem; font-family:'Courier New', Courier, monospace; "> <span style="color: #ff4500; margin: 0 0.4dfem 0 0.5em ; font-weight: bold; font-family: 'Courier New', Courier, monospace;" >NOTE:</span> Services are availabe from 19th May Onwards </p>
+
 </section>
     
 
 
   <!-- Footer -->
-<footer>
+<footer style="border-top: 2px solid rgba(43, 43, 43, 0.5); ">
   <div class="footer-container">
 
     <div class="footer-social">
@@ -188,7 +210,7 @@
 
     <div class="footer-section footer-note">
       <p>Made with ❤️ by Abhinav Kourav</p>
-      <p class="construction-note">⚠️ Site Under Construction ⚠️</p>
+      <!-- <p class="construction-note">⚠️ Site Under Construction ⚠️</p> -->
     </div>
   </div>
 
