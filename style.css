@@ -82,7 +82,7 @@ nav {
 
 .nav-links a i {
   font-size: 22px;
-  color: whitesmoke;  
+  color: #888;  
   text-decoration: none;
   transition: color 0.3s ease, transform 0.3s ease; 
   padding-left: 7px;
