@@ -562,6 +562,8 @@ a[title]:hover {
   transform: translateY(0); /* Moves it back to its original position */
 }
 
+
+
 .cal h1 {
   display: flex;
   justify-content: center;  
