@@ -24,6 +24,8 @@
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
   <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
 
 </head>
 
@@ -35,7 +37,7 @@
 
   <nav>
       
-    <div class="logo" href="/index.html">Abhinav<span>Kourav</span></div>
+    <div class="logo" href="/index.html" id="logo" >Abhinav<span>Kourav</span></div>
 
     <div class="nav-links">
       
@@ -70,7 +72,7 @@
 
   <section class="hero , fade-in">
 
-    <div class="hero-content">
+    <div class="hero-content" id="hero-content">
 
       <h1>Hi, It's <span>Abhinav</span></h1>
 
@@ -118,7 +120,7 @@
   </section>
 
   <section class="contact-form" id="contact">
-    <section class="contact-form visible" id="contact">
+    <!-- <section class="contact-form visible" id="contact"> -->
       <div class="form-container fade-in-form visible">
         <h2>Contact Me</h2>
         <p>Feel free to reach out by filling out the form below.I'd love to hear from you!</p>
@@ -148,9 +150,9 @@
         </form>
       </div>
     </section>
-      </form>
-    </div>    
-</section>
+    <!-- </section>     -->
+     
+
 
 <!-- Meeting schedule section -->
  
@@ -220,6 +222,7 @@ Cal("init", "15min", {origin:"https://cal.com"});
 
 <script src="script.js "></script>
 <script src="form.js" defer></script>
+<script src="gsap.js"></script>
 
 <!-- live chat -->
   <!-- tidio -->
