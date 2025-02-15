@@ -35,7 +35,7 @@ function createProjectBoxes() {
             {
                 title: "Abhinav kourav - Portfolio",
                 description: "My personal portfolio crafted to showcase my project works and skills.",
-                image: "/portfolio-ss.jpg",
+                image: "portfolio-ss.jpg",
                 url: "https://abhinav-2021.github.io/portfolio/",
                 delay: 3
             },
