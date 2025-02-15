@@ -33,10 +33,10 @@ function createProjectBoxes() {
                 url: "https://muffingroup.com/blog/wp-content/uploads/2023/03/Be-recipe-2.png"
             },
             {
-                title: "E-commerce Platform",
-                description: "React & Node.js shopping solution",
-                image: "https://i.pinimg.com/736x/36/15/4f/36154f696cd69a994e2c093225177f1d.jpg",
-                url: "https://i.pinimg.com/736x/36/15/4f/36154f696cd69a994e2c093225177f1d.jpg",
+                title: "Abhinav kourav - Portfolio",
+                description: "My personal portfolio crafted to showcase my project works and skills.",
+                image: "/portfolio-ss.jpg",
+                url: "https://abhinav-2021.github.io/portfolio/",
                 delay: 3
             },
             {
