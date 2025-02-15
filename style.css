@@ -367,16 +367,17 @@ a[title]:hover {
 
 
 .form-container {
-  background: rgba(255, 255, 255, 0.1); /*Semi-transparent white */
+    /* background: rgba(255, 255, 255, 0.1);  Semi-transparent white */
+    background: #131313;
   backdrop-filter: blur(10px); /* Glassmorphic blur */
   transform: scale(1.5);
-  border: 1px solid rgba(255, 255, 255, 0.2); /* Border for glass effect */
+  border: 1px solid rgba(255, 255, 255, 0.1);  /* Border for glass effect   */
   border-radius: 15px;
   padding: 2rem;
   max-width: 500px;
   width: 100%;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2); /* Subtle shadow */
   text-align: center;
+  
 }
 
 .form-container h2 {

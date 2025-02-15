@@ -6,7 +6,8 @@
     gsap.from(".hero-content p", { opacity: 0, y: 20, duration: 1.4, delay: 0.8, ease: "power2.out" });
 
     // Profile image scaling effect
-    gsap.from(".profile-image img", { scale: 0, duration: 1.5, ease: "elastic.out(1, 0.5)" });
+    // gsap.from(".profile-image img", { scale: 0, duration: 1.5, ease: "elastic.out(1, 0.5)" });
+       
 
     // Staggered fade-in effect for social links
     gsap.from(".social-links", {

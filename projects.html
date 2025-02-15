@@ -22,6 +22,7 @@
 
   <title>Projects - Abhinav Kourav</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="projects.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
   <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
   <script src="https://cdn.tailwindcss.com"></script>
@@ -69,33 +70,40 @@
   <!-- end-navbar......................... -->
 
   <section style="
+  
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 90vh;
+  height: 50vh;
   text-align: center;
   background: linear-gradient(to left, #0a0a0a, #0a0a0ad3);
   color: white;
   overflow: hidden;
   position: relative;
-  padding-bottom: 8rem;">
+  padding-bottom: 0 0.2rem, 2rem ">
   
   <h1 style="
-    font-size: 3rem;
-    margin: 0;
-    animation: fadeIn 2s ease-in-out;">
+    font-size: 2.5rem;
+    padding: 0, 0.2rem, 0px, 0.2rem;
+    animation: fadeIn 2s ease-in-out;
+    padding-left: 1vh;
+    padding-right: 1vh;">
+    
      <span style="color: #ff5400;">Projects</span> Coming Soon!
   </h1>
   <p style="
-    font-size: 1.2rem;
-    margin-top: 10px;
+    font-size: 1rem;
+    color: #808080d3;
+    /* margin-top: 10px;
+     */
+    
     animation: fadeIn 2s ease-in-out 0.5s;
     padding-left: 3.5vh;
     padding-right: 3.5vh; "
    
     >
-    Exciting things are on the way. Stay tuned for updates!
+    Note: Page is under development, these are sample projects. Stay tuned! 
   </p>
   <a href="index.html#cal" style="
     margin-top: 20px;
@@ -112,10 +120,11 @@
     
   </a>
 
+
   <!-- Floating animations -->
-  <div style="position: absolute; bottom: 10px; right: -20px; width: 150px; height: 150px; background: rgba(255, 255, 255, 0.2); border-radius: 50%; animation: floatUpDown 5s infinite ease-in-out;"></div>
+  <!-- <div style="position: absolute; bottom: 10px; right: -20px; width: 150px; height: 150px; background: rgba(255, 255, 255, 0.2); border-radius: 50%; animation: floatUpDown 5s infinite ease-in-out;"></div>
   <div style="position: absolute; top: 50px; left: -50px; width: 100px; height: 100px; background: rgba(255, 255, 255, 0.2); border-radius: 50%; animation: floatUpDown 6s infinite ease-in-out;"></div>
-  <div style="position: absolute; top: 30%; left: 45%; width: 70px; height: 70px; background: rgba(255, 255, 255, 0.1); border-radius: 50%; animation: floatUpDown 4s infinite ease-in-out;"></div>
+  <div style="position: absolute; top: 30%; left: 45%; width: 70px; height: 70px; background: rgba(255, 255, 255, 0.1); border-radius: 50%; animation: floatUpDown 4s infinite ease-in-out;"></div> -->
 
   <!-- Animations -->
   <style>
@@ -142,7 +151,17 @@
       box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
     }
   </style>
+
+
 </section>
+
+<section class="projects-container">
+  <div class="masonry-grid" id="projectsGrid"></div>
+</section>
+
+<script src="projects.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
 
 
